@@ -1,8 +1,49 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ["./src/**/*.{html,js,jsx}"],
+  mode:'jit',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+
+        "dark-blue": "#080945",
+        "light-blue": "#04286E",
+        pink: "#FF4676",
+        yellow: "#FDDF46",
+        simon: "#FFEE95",
+        "dark-grey": "#9C92AC",
+        "light-grey": "#DFDBE5",
+      },
+
+      backgroundImage: (theme) => ({
+        "gradient-rainbow":
+          "linear-gradient(81.66deg, #04286E 7.21%, #FF4676 45.05%, #FDDF46 78.07%)",
+
+        "gradient-rainblue":
+          "linear-gradient(90deg, #080945 14.53%, #FFEE95 69.36%, #9C92AC 117.73%)",
+      }),
+
+      fontFamily: {
+        Poppins: ["Poppins", "sans-serif"],
+        Inter: ["Inter", "sans-serif"]
+      },
+
+      content: {
+        brush: "url('./assets/brush.png')",
+        person1: "url('./assets/person-1.png')",
+        person2: "url('./assets/person-2.png')",
+        person3: "url('./assets/person-3.png')",
+      },
+    },
+    screens: {
+      xs: "480px",
+      ss: "620px",
+      sm: "768px",
+      md: "1060px",
+      lg: "1200px",
+      xl: "1700px",
+    },
+
   },
   plugins: [],
 }

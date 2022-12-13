@@ -2,7 +2,7 @@ import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import Link from "./Utility-Components/Link";
 
-function Navbar({isTopOfPage, selectedpage, setSelectedPage}) {
+function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
     const [isMenuToggled, setIsmenuToggled] = useState(false);
     
     const isDesktop =useMediaQuery("(min-width: 768px)");
@@ -19,11 +19,11 @@ function Navbar({isTopOfPage, selectedpage, setSelectedPage}) {
             isDesktop? (
                 <div className="flex justify-between gap-16 font-inter font-semibold text-sm ">
 
-                    <Link page= "Home" selectedpage = {selectedpage} setSelectedPage = {setSelectedPage}/>
-                    <Link page= "Skills" selectedpage = {selectedpage} setSelectedPage = {setSelectedPage}/>
-                    <Link page= "Projects" selectedpage = {selectedpage} setSelectedPage = {setSelectedPage}/>
-                    <Link page= "Testimonials" selectedpage = {selectedpage} setSelectedPage = {setSelectedPage}/>
-                    <Link page= "Contact" selectedpage = {selectedpage} setSelectedPage = {setSelectedPage}/>
+                    <Link page= "Home" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
+                    <Link page= "Skills" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
+                    <Link page= "Projects" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
+                    <Link page= "Testimonials" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
+                    <Link page= "Contact" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
 
                 </div>
                 ) : ( 
@@ -54,11 +54,11 @@ function Navbar({isTopOfPage, selectedpage, setSelectedPage}) {
                  {/* Menu Items */}
                  <div className="flex flex-col gap-10 ml-[33%] text-2xl ">
 
-                    <Link page= "Home" selectedpage = {selectedpage} setSelectedPage = {setSelectedPage}/>
-                    <Link page= "Skills" selectedpage = {selectedpage} setSelectedPage = {setSelectedPage}/>
-                    <Link page= "Projects" selectedpage = {selectedpage} setSelectedPage = {setSelectedPage}/>
-                    <Link page= "Testimonials" selectedpage = {selectedpage} setSelectedPage = {setSelectedPage}/>
-                    <Link page= "Contact" selectedpage = {selectedpage} setSelectedPage = {setSelectedPage}/>
+                    <Link page= "Home" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
+                    <Link page= "Skills" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
+                    <Link page= "Projects" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
+                    <Link page= "Testimonials" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
+                    <Link page= "Contact" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
                     
                  </div>
 

@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
-import useMediaQuery from "./hooks/useMediaQuery";
+import Hero from "./Components/Hero";
 
+
+import DotGroup from "./Components/Utility-Components/DotGroup";
+
+
+import useMediaQuery from "./hooks/useMediaQuery";
+import { motion } from "framer-motion";
 
 function App() {
 
-  const [selectedpage, setSelectedPage] =useState('home');
+  const [selectedPage, setSelectedPage] =useState('home');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
   const isDesktop = useMediaQuery("(min-width: 1060px)");
@@ -29,9 +35,26 @@ function App() {
 
     <Navbar
         isTopOfPage = {isTopOfPage} 
-        selectedpage = {selectedpage} 
+        selectedPage = {selectedPage} 
         setSelectedPage = {setSelectedPage} 
-     />   
+     />  
+
+    <div className="w-5/6 mx-auto md:h-full">
+        {isDesktop && (
+          <DotGroup
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+        )}
+        
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("home")}
+        >
+          <Hero setSelectedPage={setSelectedPage} /> 
+        </motion.div>
+    </div>
  
  </div>
   );

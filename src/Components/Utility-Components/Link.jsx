@@ -1,10 +1,8 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-
-
-function Link({page, selectedpage, setSelectedPage }) {
+function Link({page, selectedPage, setSelectedPage }) {
     const lowerCasePage = page.toLowerCase(); 
-    const textColor = selectedpage === lowerCasePage? "text-yellow" : "";
+    const textColor = selectedPage === lowerCasePage? "text-yellow" : "";
     
     return (
 

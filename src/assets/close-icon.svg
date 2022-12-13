@@ -1,12 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="47.971" height="47.969" viewBox="0 0 47.971 47.969">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-      }
-    </style>
-  </defs>
-  <g id="close-svgrepo-com" transform="translate(0 -0.001)">
-    <path id="Path_2" data-name="Path 2" class="cls-1" d="M28.228,23.986,47.092,5.122A3,3,0,1,0,42.85.88L23.986,19.744,5.121.88A3,3,0,0,0,.879,5.122L19.744,23.986.879,42.85a3,3,0,1,0,4.242,4.241L23.986,28.227,42.85,47.091a3,3,0,1,0,4.242-4.242Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="24.75" height="24.749" viewBox="0 0 24.75 24.749">
+  <g id="close-svgrepo-com" transform="translate(0.049 -0.001)">
+    <path id="Path_2" data-name="Path 2" d="M14.525,12.363,24.248,2.64A1.546,1.546,0,1,0,22.061.454l-9.722,9.723L2.616.454A1.546,1.546,0,1,0,.429,2.641l9.723,9.722L.429,22.086a1.546,1.546,0,1,0,2.186,2.186l9.723-9.723,9.723,9.723a1.546,1.546,0,1,0,2.187-2.187Z" transform="translate(0)" fill="#fff"/>
   </g>
 </svg>

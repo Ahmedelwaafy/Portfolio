@@ -20,7 +20,14 @@ module.exports = {
           "linear-gradient(81.66deg, #04286E 7.21%, #FF4676 45.05%, #FDDF46 78.07%)",
 
         "gradient-rainblue":
-          "linear-gradient(90deg, #080945 14.53%, #FFEE95 69.36%, #9C92AC 117.73%)",
+          "linear-gradient(90deg, #9C92AC 4.53%, #FFEE95 69.36%, #080945 117.73%)",
+
+          "gradient-hover":
+          "linear-gradient(81.66deg, #DFDBE5 7.21%, #04286E 45.05%, #9C92AC 78.07%)",
+
+          "gradient-simon":
+          "linear-gradient(81.66deg, #DFDBE5 7.21%, #FFEE95 45.05%, #FDDF46 78.07%)",
+
       }),
 
       fontFamily: {

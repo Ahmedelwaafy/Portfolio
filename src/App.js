@@ -17,15 +17,16 @@ function App() {
   const isDesktop = useMediaQuery("(min-width: 1060px)");
   
   useEffect(()=> {
-      const handleScroll =() =>{
-        if (window.scrollY ===0) {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
         setIsTopOfPage(true);
-       } else 
-      { setIsTopOfPage(false); } }
+      }
+      if (window.scrollY !== 0) setIsTopOfPage(false);
+    };
 
       window.addEventListener("scroll", handleScroll);
 
-      return window.removeEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
 
   }, [])
 
@@ -46,7 +47,7 @@ function App() {
             setSelectedPage={setSelectedPage}
           />
         )}
-        
+
         <motion.div
           margin="0 0 -200px 0"
           amount="all"

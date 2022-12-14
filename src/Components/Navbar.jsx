@@ -1,23 +1,30 @@
 import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import Link from "./Utility-Components/Link";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
     const [isMenuToggled, setIsmenuToggled] = useState(false);
     
     const isDesktop =useMediaQuery("(min-width: 768px)");
-    const navbarBackground = isTopOfPage? "" : "bg-pink";
+    const navbarBackground = isTopOfPage ? "" : "bg-light-blue";
   return (
-    <nav className={`${navbarBackground} w-full fixed top-0 py-6 z-40`}>
+    <nav className={`${navbarBackground}  w-full fixed top-0 py-6 z-40 `}>
         <div className="w-5/6 mx-auto flex justify-between items-center">
 
             {/* 1-logo */}
-            <h4 className="font-poppins text-3xl font-bold ">AW</h4>
+            <AnchorLink 
+                    className="font-Poppins text-3xl font-bold "
+                    onClick={()=> setSelectedPage("home")}
+                    href="#home"
+                    >
+                        AW
+                    </AnchorLink>
 
             {/* 2-DESKTOP NAV */}
             {
             isDesktop? (
-                <div className="flex justify-between gap-16 font-inter font-semibold text-sm ">
+                <div className="flex justify-between gap-16 font-Inter font-semibold text-sm ">
 
                     <Link page= "Home" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
                     <Link page= "Skills" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>

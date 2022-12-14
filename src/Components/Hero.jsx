@@ -37,7 +37,7 @@ function Hero({setSelectedPage}) {
 
 
         {/* Content */}
-        <div className="basis-3/5 z-30 mt-12 md:mt-32">
+        <div className="basis-3/5 z-30 mt-20 md:mt-32">
 
             {/* Headings */}
             <motion.div
@@ -58,7 +58,7 @@ function Hero({setSelectedPage}) {
                     </span> 
                 </h1>
 
-                <h2 className=" font-Poppins mt-10 mb-7 text-2xl text-center md:text-start font-semibold">
+                <h2 className=" text-light-grey font-Poppins mt-10 mb-7 text-2xl text-center md:text-start font-medium italic">
                 Passionate junior front-end developer skilled in most in-demand technologies. With an eye on UI/UX principles.
                 </h2>
             

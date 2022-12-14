@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
+import Skills from "./Components/Skills";
 
 
 import DotGroup from "./Components/Utility-Components/DotGroup";
+import LineGradient from "./Components/Utility-Components/LineGradient";
 
 
 import useMediaQuery from "./hooks/useMediaQuery";
@@ -20,6 +22,7 @@ function App() {
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
+        setSelectedPage("home");
       }
       if (window.scrollY !== 0) setIsTopOfPage(false);
     };
@@ -56,6 +59,25 @@ function App() {
           <Hero setSelectedPage={setSelectedPage} /> 
         </motion.div>
     </div>
+
+    <LineGradient />
+
+      <div className="w-5/6 mx-auto md:h-full ">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("skills")}
+        >
+          <Skills />
+        </motion.div>
+      </div>
+
+      <div className="md:mt-56">
+        <LineGradient />
+      </div>
+
+      
+
  
  </div>
   );

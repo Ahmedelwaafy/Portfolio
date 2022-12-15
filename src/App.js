@@ -3,6 +3,8 @@ import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
+import Testimonials from "./Components/Testimonials";
+
 
 
 import DotGroup from "./Components/Utility-Components/DotGroup";
@@ -63,7 +65,7 @@ function App() {
 
     <LineGradient />
 
-      <div className="w-5/6 mx-auto md:h-full ">
+      <div className="w-5/6 mx-auto  ">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -73,17 +75,26 @@ function App() {
         </motion.div>
       </div>
 
-      <div className="md:mt-56">
         <LineGradient />
-      </div>
 
-            <div className="w-5/6 mx-auto">
+      <div className="w-5/6 mx-auto ">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
           onViewportEnter={() => setSelectedPage("projects")}
         >
           <Projects />
+        </motion.div>
+      </div>
+      <LineGradient />
+
+      <div className="w-5/6 mx-auto ">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("testimonials")}
+        >
+          <Testimonials />
         </motion.div>
       </div>
       <LineGradient />

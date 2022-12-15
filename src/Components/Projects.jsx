@@ -63,7 +63,7 @@ const container = {
 
 function Projects() {
   return (
-    <section id="Projects" className="pt-10 pb-24 ">
+    <section id="projects" className="pt-10 pb-24 ">
 
         {/* HEADINGS */}
 

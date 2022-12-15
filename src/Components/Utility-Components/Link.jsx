@@ -8,7 +8,7 @@ function Link({page, selectedPage, setSelectedPage }) {
 
     <AnchorLink 
     className= {` ${textColor} hover:text-yellow transition duration-500`}
-    href={`${lowerCasePage}`}
+    href={`#${lowerCasePage}`}
     onClick={ () => setSelectedPage(lowerCasePage)}
     >
         {page}

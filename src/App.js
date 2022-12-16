@@ -4,6 +4,9 @@ import Hero from "./Components/Hero";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Testimonials from "./Components/Testimonials";
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
+
 
 
 
@@ -98,6 +101,17 @@ function App() {
         </motion.div>
       </div>
       <LineGradient />
+
+      <div className="w-5/6 mx-auto md:h-full">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("contact")}
+        >
+          <Contact />
+        </motion.div>
+      </div>
+      <Footer />
 
  
  </div>

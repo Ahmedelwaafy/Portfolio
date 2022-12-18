@@ -34,7 +34,7 @@ function Contact() {
 
     return (
 
-      <section id="contact" className="pt-10 pb-24 ">
+      <section id="contact" className="pt-10 pb-20 ">
   
           {/* Headings and Form Section*/}
           

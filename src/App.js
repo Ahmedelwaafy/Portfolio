@@ -4,27 +4,21 @@ import Hero from "./Components/Hero";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Testimonials from "./Components/Testimonials";
+import Technologies from "./Components/Technologies";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-
-
-
-
 import DotGroup from "./Components/Utility-Components/DotGroup";
 import LineGradient from "./Components/Utility-Components/LineGradient";
-
-
 import useMediaQuery from "./hooks/useMediaQuery";
 import { motion } from "framer-motion";
 
 function App() {
-
-  const [selectedPage, setSelectedPage] =useState('home');
+  const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
   const isDesktop = useMediaQuery("(min-width: 1060px)");
-  
-  useEffect(()=> {
+
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
@@ -33,23 +27,20 @@ function App() {
       if (window.scrollY !== 0) setIsTopOfPage(false);
     };
 
-      window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-      return () => window.removeEventListener("scroll", handleScroll);
-
-  }, [])
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-
     <div className="app">
+      <Navbar
+        isTopOfPage={isTopOfPage}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
 
-    <Navbar
-        isTopOfPage = {isTopOfPage} 
-        selectedPage = {selectedPage} 
-        setSelectedPage = {setSelectedPage} 
-     />  
-
-    <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto md:h-full">
         {isDesktop && (
           <DotGroup
             selectedPage={selectedPage}
@@ -62,11 +53,11 @@ function App() {
           amount="all"
           onViewportEnter={() => setSelectedPage("home")}
         >
-          <Hero setSelectedPage={setSelectedPage} /> 
+          <Hero setSelectedPage={setSelectedPage} />
         </motion.div>
-    </div>
+      </div>
 
-    <LineGradient />
+      <LineGradient />
 
       <div className="w-5/6 mx-auto  ">
         <motion.div
@@ -78,7 +69,7 @@ function App() {
         </motion.div>
       </div>
 
-        <LineGradient />
+      <LineGradient />
 
       <div className="w-5/6 mx-auto ">
         <motion.div
@@ -95,9 +86,9 @@ function App() {
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
-          onViewportEnter={() => setSelectedPage("testimonials")}
+          onViewportEnter={() => setSelectedPage("technologies")}
         >
-          <Testimonials />
+          <Technologies />
         </motion.div>
       </div>
       <LineGradient />
@@ -112,9 +103,7 @@ function App() {
         </motion.div>
       </div>
       <Footer />
-
- 
- </div>
+    </div>
   );
 }
 

@@ -13,7 +13,7 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
       <div className="w-5/6 mx-auto flex justify-between items-center">
         {/* 1-logo */}
         <AnchorLink
-          className="font-Poppins text-3xl font-bold "
+          className="font-Poppins text-3xl font-bold hover:text-pink duration-500"
           onClick={() => setSelectedPage("home")}
           href="#home"
         >
@@ -39,7 +39,7 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            
+
             <Link
               page="Technologies"
               selectedPage={selectedPage}
@@ -53,7 +53,7 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
           </div>
         ) : (
           <button
-            className="rounded-full bg-pink p-2 "
+            className="hover:scale-110 active:scale-90 duration-300"
             onClick={() => setIsmenuToggled(!isMenuToggled)}
           >
             <img src="../assets/menu-icon.svg" alt="menu-icon" />
@@ -61,12 +61,18 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
         )}
 
         {/* MOBILE MENU  */}
-        {!isDesktop && isMenuToggled && (
-          <div className="fixed right-0 bottom-0 h-full bg-dark-grey w-[300px]">
+        {!isDesktop && (
+          <div
+            className={`fixed ${
+              isMenuToggled
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-80"
+            }  right-0 duration-700 bottom-0 h-full bg-pink w-[300px] border-white border-2`}
+          >
             {/* Close Button */}
             <div className="flex justify-end p-12">
               <button
-                className="rounded-full bg-pink p-2 "
+                className=" hover:scale-110 active:scale-90 duration-300"
                 onClick={() => setIsmenuToggled(!isMenuToggled)}
               >
                 <img src="../assets/close-icon.svg" alt="close-icon" />
@@ -75,30 +81,36 @@ function Navbar({isTopOfPage, selectedPage, setSelectedPage}) {
 
             {/* Menu Items */}
             <div className="flex flex-col gap-10 ml-[33%] text-2xl ">
+              
               <Link
                 page="Home"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                setIsmenuToggled={setIsmenuToggled}
               />
               <Link
                 page="Skills"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                setIsmenuToggled={setIsmenuToggled}
               />
               <Link
                 page="Projects"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                setIsmenuToggled={setIsmenuToggled}
               />
               <Link
                 page="Technologies"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                setIsmenuToggled={setIsmenuToggled}
               />
               <Link
                 page="Contact"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                setIsmenuToggled={setIsmenuToggled}
               />
             </div>
           </div>

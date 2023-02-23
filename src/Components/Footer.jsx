@@ -17,7 +17,7 @@ function Footer() {
       <LineGradient width= "w-10/12"/>
       </div>
       <p className="mt-7 font-Inter font-regular text-md text-simon text-center">
-      ©2022 ELWAFY. All Rights Reserved.
+      ©2023 ELWAFY. All Rights Reserved.
     
       </p>
 

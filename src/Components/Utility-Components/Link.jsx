@@ -1,19 +1,19 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-function Link({page, selectedPage, setSelectedPage }) {
-    const lowerCasePage = page.toLowerCase(); 
-    const textColor = selectedPage === lowerCasePage? "text-yellow" : "";
-    
-    return (
+function Link({ page, selectedPage, setSelectedPage, setIsmenuToggled }) {
+  const lowerCasePage = page.toLowerCase();
+  const textColor = selectedPage === lowerCasePage ? "text-yellow" : "";
 
-    <AnchorLink 
-    className= {` ${textColor} hover:text-yellow transition duration-500`}
-    href={`#${lowerCasePage}`}
-    onClick={ () => setSelectedPage(lowerCasePage)}
+  return (
+    <AnchorLink
+      className={` ${textColor} hover:text-yellow transition duration-500`}
+      href={`#${lowerCasePage}`}
+      onClick={() => {setIsmenuToggled(false);
+      setSelectedPage(lowerCasePage);}}
     >
-        {page}
+      {page}
     </AnchorLink>
-  )
+  );
 }
 
 export default Link

@@ -2,10 +2,22 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/default";
 import LineGradient from "./Utility-Components/LineGradient";
 import { motion } from "framer-motion";
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
 
+const TechnologyVariant = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1 },
+};
 function Technologies() {
   const splideOptions = {
-    perPage: 6,
+    perPage: 5,
     perMove: 2,
     type: "loop",
     rewind: true,
@@ -37,7 +49,10 @@ function Technologies() {
     { title: "Next.js", src: "../assets/nextjs.svg" },
   ];
   return (
-    <section id="technologies" className="pt-10 pb-24 flex flex-col justify-center gap-14 h-[100vh]">
+    <section
+      id="technologies"
+      className="pt-10 pb-24 flex flex-col justify-center gap-14 h-[100vh]"
+    >
       {/* HEADINGS */}
 
       <motion.div
@@ -58,16 +73,30 @@ function Technologies() {
           <LineGradient width="w-1/3" />
         </div>
       </motion.div>
-      <Splide options={splideOptions}>
-        {Technologies.map((Technology, index) => (
-          <SplideSlide key={index}>
-            <div className="flex flex-col items-center justify-center gap-8">
-              <img src={Technology.src} alt={Technology.src} className="cursor-pointer"/>
-              <h3 className="font-bold text-xl">{Technology.title}</h3>
-            </div>
-          </SplideSlide>
-        ))}
-      </Splide>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Splide options={splideOptions}>
+          {Technologies.map((Technology, index) => (
+            <SplideSlide key={index}>
+              <motion.div
+                variants={TechnologyVariant}
+                className="flex flex-col items-center justify-center gap-8"
+              >
+                <img
+                  src={Technology.src}
+                  alt={Technology.src}
+                  className="cursor-pointer"
+                />
+                <h3 className="font-bold text-xl">{Technology.title}</h3>
+              </motion.div>
+            </SplideSlide>
+          ))}
+        </Splide>
+      </motion.div>
     </section>
   );
 }

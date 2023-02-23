@@ -10,6 +10,10 @@ const container = {
     },
   },
 };
+const projectVariant = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1 },
+};
 
 const projects = [
   {
@@ -97,9 +101,12 @@ function Projects() {
         >
           {/* col 1 */}
           <div className="max-w-[400px]">
-            <div className="flex justify-center items-center text-center p-10 bg-cyan-400  h-[130px] w-full  text-2xl font-Inter font-semibold ">
+            <motion.div
+              variants={projectVariant}
+              className="flex justify-center items-center text-center p-10 bg-cyan-400  h-[130px] w-full  text-2xl font-Inter font-semibold "
+            >
               BEAUTIFUL USER INTERFACES
-            </div>
+            </motion.div>
             <Project project={projects[0]} />
           </div>
 
@@ -109,9 +116,12 @@ function Projects() {
           {/* col 3 */}
           <div className="max-w-[400px]">
             <Project project={projects[1]} />
-            <div className=" md:col-span-2 lg:col-span-1 flex justify-center items-center text-center p-10 bg-fuchsia-500 w-full h-[130px]  md:max-w-[800px] lg:max-w-[400px] text-2xl font-Inter font-semibold md: ">
+            <motion.div
+              variants={projectVariant}
+                           className=" md:col-span-2 lg:col-span-1 flex justify-center items-center text-center p-10 bg-fuchsia-500 w-full h-[130px]  md:max-w-[800px] lg:max-w-[400px] text-2xl font-Inter font-semibold md: "
+            >
               SMOOTH USER EXPERIENCE
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

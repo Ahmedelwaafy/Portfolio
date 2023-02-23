@@ -66,7 +66,7 @@ const projectVariant = {
             className={` transition duration-[2s] absolute top-[45%]   ${
               inverse
                 ? "-rotate-[270deg] right-[6px] opacity-100"
-                : " rotate-[270deg] left-1 opacity-0"
+                : " rotate-[270deg] left-[1px] opacity-0 "
             } `}
           >
             <lord-icon

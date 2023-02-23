@@ -20,15 +20,34 @@ function DotGroup({selectedPage, setSelectedPage}) {
   
   return (
     <div className="fixed flex flex-col gap-6 right-7 top-[60%]">
+      <DotLink
+        page="home"
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
+      <DotLink
+        page="skills"
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
       
-       <DotLink page= "home" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
-       <DotLink page= "skills" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
-       <DotLink page= "projects" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
-       <DotLink page= "testimonials" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
-       <DotLink page= "contact" selectedPage = {selectedPage} setSelectedPage = {setSelectedPage}/>
-
+      <DotLink
+        page="projects"
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
+      <DotLink
+        page="technologies"
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
+      <DotLink
+        page="contact"
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
     </div>
-  )
+  );
 }
 
 export default DotGroup

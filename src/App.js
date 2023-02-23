@@ -3,7 +3,6 @@ import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
-import Testimonials from "./Components/Testimonials";
 import Technologies from "./Components/Technologies";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";

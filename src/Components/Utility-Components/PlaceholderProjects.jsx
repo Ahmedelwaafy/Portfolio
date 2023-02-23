@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import LineGradient from "./Utility-Components/LineGradient";
+import LineGradient from "./LineGradient";
 
 
 const container = {

@@ -8,12 +8,13 @@ function Contact() {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   const {
     register,
-        formState: { errors },
+    formState: { errors },
+    handleSubmit,
     reset,
   } = useForm();
 
   const onSubmit = () => {
-    setTimeout(()=>reset(), 3000);
+    setTimeout(() => reset(), 3000);
   };
 
   return (
@@ -21,8 +22,8 @@ function Contact() {
       {/* Headings and Form Section*/}
 
       <div className="flex justify-center gap-16  mt-12 md:mt-32">
-        {/* Headings  */}
         <div className="  md:w-3/5">
+          {/* Headings  */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -62,6 +63,7 @@ function Contact() {
               <input
                 type="text"
                 placeholder="NAME"
+                required
                 name="formname"
                 {...register("name", { required: true, maxLength: 100 })}
                 className="w-full bg-light-grey font-Inter font-semibold placeholder-dark-grey p-3 "
@@ -75,7 +77,8 @@ function Contact() {
               )}
 
               <input
-                type="text"
+                type="email"
+                required
                 placeholder="EMAIL"
                 name="formemail"
                 {...register("email", {
@@ -94,6 +97,7 @@ function Contact() {
 
               <textarea
                 name="formmessage"
+                required
                 rows="4"
                 cols="50"
                 placeholder="MESSAGE"
@@ -116,7 +120,6 @@ function Contact() {
                 type="submit"
                 className="p-5 bg-pink font-semibold font-Inter text-lg text-simon mt-5 hover:bg-simon hover:text-dark-blue transition duration-500  "
               >
-                
                 SEND ME A MESSAGE
               </button>
             </form>
@@ -135,7 +138,7 @@ function Contact() {
               visible: { opacity: 1, y: 0 },
             }}
             className="relative md:w-2/5 z-0 ml-20 before:absolute before:-top-10 before:-left-10
-                          before:w-full before:h-full before:border-2 before:border-pink before:z-[-1] md:before:max-h-[350px] lg:before:max-h-[500px]   "
+            before:w-full before:h-full before:border-2 before:border-pink before:z-[-1] md:before:max-h-[350px] lg:before:max-h-[500px]   "
           >
             <img
               alt="Contact"

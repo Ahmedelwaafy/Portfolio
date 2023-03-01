@@ -56,7 +56,7 @@ function Hero({setSelectedPage}) {
             </h1>
 
             <h2 className=" text-light-grey font-Poppins mt-10 mb-7 text-2xl text-center md:text-start font-medium italic">
-              Passionate junior front-end developer skilled in most in-demand
+              Passionate front-end developer skilled in most in-demand
               technologies. With an eye on UI/UX principles.
             </h2>
           </motion.div>
